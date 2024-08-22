@@ -127,7 +127,7 @@ SELECT
 FROM employees
 	LEFT JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
 	LEFT JOIN departments ON dept_emp.dept_no = departments.dept_no
-WHERE departments.dept_no = 'd005' or departments.dept_no = 'd007';
+WHERE departments.dept_no IN ('d005','d007');
 
 -- 8.List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 SELECT 
